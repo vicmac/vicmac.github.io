@@ -1,2 +1,0 @@
-# vicmac.github.io
-ybsvhnyrsl!
