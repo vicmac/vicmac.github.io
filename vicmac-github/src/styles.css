@@ -1,4 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Raleway, "Helvetica Neue", sans-serif !important;
+  background-color: #0a73b0
+}
+
+.profile-card {
+  margin: 20px;
+}
+
+* {
+  font-family: Raleway /* Replace with your custom font */, sans-serif !important;
+  /* Add !important to overwrite all elements */
+}
