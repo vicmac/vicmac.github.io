@@ -14,11 +14,13 @@ export class SkillscardComponent implements OnInit {
     'Kotlin',
     'Android',
     'Android Architecture Components',
+    'Material Design',
     'Firebase',
     'Spring Boot',
     'Mybatis',
     'Gradle',
     'Cryptography',
+    'Git',
   ];
 
   secSkills = [

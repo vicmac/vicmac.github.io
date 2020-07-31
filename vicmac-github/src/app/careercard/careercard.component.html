@@ -1,0 +1,49 @@
+<mat-card class="padded-card">
+  <mat-card-header>
+    <mat-card-title>I've seen things</mat-card-title>
+    <mat-card-subtitle>You people wouldn't believe</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+
+    <div class="career-action-buttons">
+      <button mat-button (click)="accordion.openAll()">See All</button>
+      <button mat-button (click)="accordion.closeAll()">Hide All</button>
+    </div>
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel style="padding: 12px" *ngFor="let exp of workExperience">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="align-center">
+            <div mat-card-avatar [ngStyle]="{ 'background-image': 'url(/assets/workplaces/' + exp.workplaceImg + ')', 'background-size': 'cover'}"></div>
+            <h4 style="margin: 0 0 0 12px">{{exp.name}}</h4>
+          </mat-panel-title>
+          <mat-panel-description class="align-center">
+            {{exp.timeframe}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div style="padding: 12px" *ngFor="let position of exp.children">
+          <h3>{{position.name}}</h3>
+          <h4>{{position.timeframe}}</h4>
+          <p style="padding: 12px">{{position.description}}</p>
+          <ul>
+            <li *ngFor="let resp of position.responsibilities">
+              {{resp}}
+            </li>
+          </ul>
+        </div>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="career-action-buttons">
+      <button mat-button (click)="accordion.openAll()">See All</button>
+      <button mat-button (click)="accordion.closeAll()">Hide All</button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+
+
